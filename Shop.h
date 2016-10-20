@@ -12,21 +12,32 @@ class RobotModels;
 class SalesAssoc;
 class Boss;
 class Customers;
+class Model;
 
 class Shop
 {
 public:
 	Shop();
-	void addModel(RobotModels* item);
-	void addCustomer(Customers* name);
+	void addModel(Model* ID);
+	void addOrder(Order* orderID);
+	void addCustomer(Customers* id);
+	void addSalesAssoc(SalesAssoc* empID);
 	void addBoss(Boss* bossName);
-	RobotModels* viewModels(int modelID);
+	Boss* checkBoss(int bossID);
+	Model* viewModels();
+	Order* viewOrder(int orderNum);
 	Customers* findCustomer(int ID);
+	Customers* viewCustomers();
+	SalesAssoc* viewEmployees();
+	SalesAssoc* findEmployee(int empID);
+	Model* findModel(int modID);
+	Order* findOrder(int orderNum);
 
 protected:
 	vector<SalesAssoc*> employee;
 	vector<Customers*> customer;
-	vector<RobotModels*> model;
+	vector<Model*> model;
 	vector<Boss*> boss;
+	vector<Order*> order;
 };
 #endif

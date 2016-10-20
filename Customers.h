@@ -16,7 +16,7 @@ class SalesAssoc;
 
 //Add more class as needed
 
-class Customers : public Order
+class Customers
 {
 protected:
 	string name;

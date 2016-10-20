@@ -6,19 +6,21 @@
 #include <vector>
 #include <stdlib.h>
 #include "RobotModels.h"
+#include "Order.h"
+#include "Shop.h"
 
 using namespace std;
 
 class Customer;
 class RobotModels;
 class Order;
+class Shop;
 
-class SalesAssoc
+class SalesAssoc : public Shop
 {
 protected:
 	string empName;
 	int empID;
-	double totalSales;
 public:
 	SalesAssoc();
 	SalesAssoc(string name, int ID);
@@ -26,6 +28,7 @@ public:
 	void setEmpName(string name);
 	int getEmpID();
 	void setEmpID(int ID);
+
 
 };
 
